@@ -11,8 +11,9 @@ $formatters = [
 $defaultFormatter = 'crunched';
 
 $options = [
-  '--verbose' => false,
   '--formatter' => $defaultFormatter,
+  '--suffix' => '',
+  '--verbose' => false,
 ];
 foreach ($argv as $pn) {
   $parts = explode('=', $pn);
@@ -53,7 +54,7 @@ foreach ($files as $inputFile) {
   $fullSourceFile = "{$src}/{$inputFile}";
   if (in_array($inputFile, ['.', '..']) || is_dir($fullSourceFile)) continue;
   if (is_readable($fullSourceFile)) {
-    $outputBaseName = str_replace('.scss', '.min.css', $inputFile);
+    $outputBaseName = str_replace('.scss', "{$options['--suffix']}.css", $inputFile);
     $outputFilename = "{$tgt}/{$outputBaseName}";
     if ($options['--verbose'] === true) {
       echo "\tCompiling: {$inputFile} as {$outputBaseName}...\n";
