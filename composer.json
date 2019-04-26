@@ -11,6 +11,6 @@
       "email": "alejandro@roetal.com"
     }
   ],
-  "bin": ["bin/sass2css.php"],
+  "bin": ["bin/sass2css"],
   "minimum-stability": "dev"
 }
