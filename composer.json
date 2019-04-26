@@ -2,7 +2,7 @@
   "name": "a3gz/cli-sass2css",
   "description": "Command line SASS to CSS compiler",
   "require": {
-    "leafo/scssphp": "dev-master"
+    "leafo/scssphp": "^0.7"
   },
   "license": "MIT",
   "authors": [
@@ -11,6 +11,5 @@
       "email": "alejandro@roetal.com"
     }
   ],
-  "bin": ["bin/sass2css.php"],
-  "minimum-stability": "dev"
+  "bin": ["bin/sass2css"]
 }
