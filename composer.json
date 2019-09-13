@@ -11,5 +11,8 @@
       "email": "alejandro@roetal.com"
     }
   ],
+  "scripts": {
+    "test": "php bin/sass2css test/src/ test/dist"
+  },
   "bin": ["bin/sass2css"]
 }
